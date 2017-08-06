@@ -5,17 +5,28 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.caojm</groupId>
-    <artifactId>spring-boot</artifactId>
+    <artifactId>springboot-demo</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+
     <modules>
-        <module>spring-boot-hbase</module>
         <module>spring-boot-web</module>
     </modules>
-
     <properties>
-        <spring.boot.version>1.4.0.RELEASE</spring.boot.version>
+        <framework.boot.version>1.0-SNAPSHOT</framework.boot.version>
         <log4j.version>1.2.12</log4j.version>
         <slf4j.version>1.7.9</slf4j.version>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.caojm</groupId>
+                <artifactId>framework-boot-parent</artifactId>
+                <version>${framework.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>

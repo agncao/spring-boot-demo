@@ -21,6 +21,8 @@ public class HelloWorldController {
     @GetMapping("")
     public ModelAndView hello(ModelAndView mv,HttpSession session){
         logger.info("begin execute method:{}","hello");
+
+        mv.addObject("hello", "hello world");
         mv.setViewName("index");
         return mv;
     }
