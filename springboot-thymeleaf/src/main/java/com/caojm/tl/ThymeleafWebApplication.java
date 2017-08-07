@@ -1,4 +1,4 @@
-package com.caojm;
+package com.caojm.tl;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -12,10 +12,10 @@ import org.springframework.boot.web.support.SpringBootServletInitializer;
 
 /** 扫描 路径 scanBasePackages com.caojm 为当前业务基包 */
 @SpringBootApplication
-public class Application extends SpringBootServletInitializer{
+public class ThymeleafWebApplication extends SpringBootServletInitializer{
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class);  //运行WEB
+        SpringApplication.run(ThymeleafWebApplication.class);  //运行WEB
     }
 
 }
