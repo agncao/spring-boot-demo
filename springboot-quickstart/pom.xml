@@ -9,9 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring-boot-web</artifactId>
-    <packaging>jar</packaging>
-    <name>spring-boot-web</name>
+    <artifactId>springboot-quickstart</artifactId>
 
     <dependencies>
         <!-- 导入spring-boot 三大核心模块 start -->
@@ -50,13 +48,38 @@
     </dependencies>
 
     <build>
+        <finalName>${project.artifactId}</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>**/*.*</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>src/main/webapp</directory>
+                <filtering>false</filtering>
+                <includes>
+                    <include>**/*.*</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>src/main/bin</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>**/*.*</include>
+                </includes>
+                <targetPath>${project.build.directory}/bin</targetPath>
+            </resource>
+        </resources>
         <plugins>
             <!-- spring boot 插件 -可打成单独可运行的JAR -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.caojm.Application</mainClass>
+                    <mainClass>com.caojm.quickstart.QuickStartApplication</mainClass>
                     <layout>JAR</layout>
                 </configuration>
                 <executions>
@@ -70,4 +93,7 @@
         </plugins>
     </build>
 
+    <profiles>
+
+    </profiles>
 </project>
