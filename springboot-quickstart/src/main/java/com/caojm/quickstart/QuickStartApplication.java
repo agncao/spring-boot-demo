@@ -7,7 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 
 /**
- * @author <a href="mailto:caojianmin@jd.com">caojianmin</a>
+ * 程序入口
+ * 相关源码解读：http://www.jianshu.com/p/cb5cb5937686
+ * @author :曹建明
  * @create 2017/08/07 15:53
  */
 @SpringBootApplication

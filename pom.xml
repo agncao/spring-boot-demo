@@ -12,6 +12,8 @@
     <modules>
         <module>springboot-thymeleaf</module>
         <module>springboot-quickstart</module>
+        <module>springboot-rest</module>
+        <module>springcloud-eureka</module>
     </modules>
     <properties>
         <framework.boot.version>1.0-SNAPSHOT</framework.boot.version>
