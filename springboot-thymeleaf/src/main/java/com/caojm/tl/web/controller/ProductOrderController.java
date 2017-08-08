@@ -67,7 +67,7 @@ public class ProductOrderController {
         entity.setProductPrice(new BigDecimal(1668));
         list.add(entity);
 
-        mv.addObject("entity",entity);
+        mv.addObject("list",list);
         mv.setViewName("order/list");
         return mv;
     }
