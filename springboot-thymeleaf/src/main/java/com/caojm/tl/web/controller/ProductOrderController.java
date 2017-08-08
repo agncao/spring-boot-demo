@@ -42,7 +42,8 @@ public class ProductOrderController {
         entity.setProductCode(10);
         entity.setProductName("向匹配项目中推送10次，定价为1668元（推荐）");
         entity.setOrderStatus((short)0);
-        entity.setPaidStatus((short)0);
+        entity.setPaidStatus((short)5);
+        entity.setPaidTime(new Date());
         entity.setCreateTime(new Date());
         entity.setCreatorId(10068l);
         entity.setProductPrice(new BigDecimal(1668));

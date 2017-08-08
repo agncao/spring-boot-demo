@@ -68,7 +68,7 @@
         <td th:text="${entity.orderCode}" style="text-align:center;vertical-align:middle" >MQZT201702230001（订单编号）</td>
         <td th:text="${entity.supplierName}" style="text-align:center;vertical-align:middle">内蒙古中冠科技有限公司（核心供名称）</td>
         <td th:text="${entity.productName}" style="text-align:center;vertical-align:middle">&nbsp;</td>
-        <td th:text="${#calendars.format(entity.paidTime,'yyyy-MM-dd HH:mm')}" style="text-align:center;vertical-align:middle">2017-01-18 00:00</td>
+        <td th:text="${entity.paidTime == null ?' ':#calendars.format(entity.paidTime,'yyyy-MM-dd HH:mm')}" style="text-align:center;vertical-align:middle">2017-01-18 00:00</td>
         <td style="text-align:center;vertical-align:middle">&nbsp;<button class="btn btn-primary checkInfo" type="button"  >查看</button>&nbsp;</td>
         <!--<td style="text-align:center;vertical-align:middle">&nbsp;<button class="btn btn-primary checkInfo" th:if="${T(SpEL).hasRights('prodorder:projectexp:view')}"  type="button"  >查看</button>&nbsp;</td>-->
     </tr>
