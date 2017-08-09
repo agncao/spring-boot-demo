@@ -33,6 +33,11 @@
                 <artifactId>framework-boot-starter</artifactId>
                 <version>${framework.boot.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.caojm.framework</groupId>
+                <artifactId>framework-cloud-starter</artifactId>
+                <version>${framework.boot.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 </project>
