@@ -1,3 +1,7 @@
+#springboot-demo介绍
+不是教程是个人项目实践总结;
+为了使pom看上去优雅，需依赖[framework-boot-parent](https://github.com/agncao/framework-boot-parent.git)下的各starter,例如framework-boot-starter;
+
 ## springboot-quickstart
 一个简单的hello world web小程序，简单的示范了：  
 1. 多模块项目中，当spring-boot程序有自己的母pom时，不用继承Spring Boot的提供的父工程spring-boot-starter-parent
@@ -6,7 +10,7 @@
 4. spring-boot如何整合log4j2;
 ## springboot-thymeleaf
 示范最常用的thymeleaf语法：
-1. 标签只有在th:if中条件成立时才显示(比如当前用户拥有某权限时,[提交]按钮自才可见); 
+1. 标签只有在th:if中条件成立时才显示(比如当前用户拥有某权限时,"提交"按钮自才可见); 
 2. 示范引用js文件、css文件;
 3. 示范循环语句，例如用于<table>标签的每一行;
 4. 日期格式化语句;
