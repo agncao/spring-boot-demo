@@ -9,26 +9,28 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
+    <parent>
+        <artifactId>framework-boot-parent</artifactId>
+        <groupId>com.caojm.framework</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
     <modules>
         <module>springboot-thymeleaf</module>
         <module>springboot-quickstart</module>
-        <module>springboot-rest</module>
         <module>springcloud-eureka</module>
     </modules>
     <properties>
         <framework.boot.version>1.0-SNAPSHOT</framework.boot.version>
-        <log4j.version>1.2.12</log4j.version>
-        <slf4j.version>1.7.9</slf4j.version>
+        <!--<apache.httpclient.version>4.5.3</apache.httpclient.version>-->
     </properties>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.caojm</groupId>
-                <artifactId>framework-boot-parent</artifactId>
+                <groupId>com.caojm.framework</groupId>
+                <artifactId>framework-boot-starter</artifactId>
                 <version>${framework.boot.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
