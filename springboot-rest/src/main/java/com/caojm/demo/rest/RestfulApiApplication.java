@@ -3,6 +3,9 @@ package com.caojm.demo.rest;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+
+
 /**
  * 程序启动入口
  * 相关源码解读：http://www.jianshu.com/p/cb5cb5937686
@@ -11,6 +14,7 @@ import org.springframework.boot.web.support.SpringBootServletInitializer;
  */
 
 /** 扫描 路径 scanBasePackages com.caojm 为当前业务基包 */
+@EnableDiscoveryClient
 @SpringBootApplication
 public class RestfulApiApplication extends SpringBootServletInitializer{
 
