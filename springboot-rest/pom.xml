@@ -40,14 +40,6 @@
                     <include>**/*.*</include>
                 </includes>
             </resource>
-            <resource>
-                <directory>src/main/bin</directory>
-                <filtering>true</filtering>
-                <includes>
-                    <include>**/*.*</include>
-                </includes>
-                <targetPath>${project.build.directory}/bin</targetPath>
-            </resource>
         </resources>
         <plugins>
             <!-- spring boot 插件 -可打成单独可运行的JAR -->
