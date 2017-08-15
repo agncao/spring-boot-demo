@@ -3,7 +3,6 @@ package com.caojm.demo.zuul;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
-import org.springframework.cloud.client.SpringCloudApplication;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
 /**
@@ -15,11 +14,11 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
  * @date :2017-02-24 16:05:27
  */
 @EnableZuulProxy
-@SpringCloudApplication
+@SpringBootApplication
 public class CloudZuulApplication extends SpringBootServletInitializer{
 
     public static void main(String[] args) {
-        SpringApplication.run(CloudZuulApplication.class);  //运行WEB
+        SpringApplication.run(CloudZuulApplication.class, args);  //运行WEB
     }
 
 }

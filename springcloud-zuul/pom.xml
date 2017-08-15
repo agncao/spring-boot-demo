@@ -10,6 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>springcloud-zuul</artifactId>
+    <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
@@ -17,8 +18,19 @@
             <artifactId>framework-boot-starter</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.caojm.framework</groupId>
-            <artifactId>framework-cloud-starter</artifactId>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka-server</artifactId>
+        </dependency>
+        <!-- spring-boot-starter-test：测试模块，包括JUnit、Hamcrest、Mockito -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!-- 导入spring-boot 三大核心模块 end -->
+        <dependency> <!-- 引入log4j2依赖 -->
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-log4j2</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -63,7 +75,7 @@
             <properties>
                 <pom.log.level>INFO</pom.log.level>
                 <pom.log.dir>logs</pom.log.dir>
-                <pom.application.name>springboot-rest</pom.application.name>
+                <pom.application.name>springcloud-zuul</pom.application.name>
             </properties>
         </profile>
     </profiles>
