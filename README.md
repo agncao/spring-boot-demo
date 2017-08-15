@@ -16,3 +16,13 @@
 4. 日期格式化语句;
 5. 三元运算;
 6. 此module已经包含了springboot-quickstart
+## spring cloud demo
+### springcloud-eureka
+1. 注册中心;
+2. 注册中心cluster（待实现）
+### springboot-rest
+1. 生产者，restful api，注册在springcloud-eureka server
+2. swagger
+### springcloud-zuul
+1. 通过反向代理
+2. 同样注册在springcloud-eureka server，并通过eureka注册中心，实现生产者与消费者的解耦
