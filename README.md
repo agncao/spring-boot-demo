@@ -17,12 +17,21 @@
 5. 三元运算;
 6. 此module已经包含了springboot-quickstart
 ## spring cloud demo
+当某个子应用要获取restful时，只需从eureka中获取restful服务实例甚至可以直接访问restful api。  
+但是这样需要向客户端暴露服务资源，且随着微服务化的不断推进，每个应用所依赖的服务将越来越多，需要在应用中配置服务的资源路径也就变得越来越庞大而费劲。  
+这样，使用eureka作为restful服务的注册中心的优势就无法体现出来，使用zuul进行反向代理结合eureka，实现生产者和消费者的解耦。以下是各个服务的部署路径：
+1. springcloud-eureka: 127.0.0.1:8761
+2. springcloud-zuul: 127.0.0.1:8088
+3. springboot-rest: 127.0.0.1:8012
+访问 http://127.0.0.1:8088/producer/hello 将路由到 http://127.0.0.1:8012/hello
 ### springcloud-eureka
 1. 注册中心;
 2. 注册中心cluster（待实现）
 ### springboot-rest
-1. 生产者，restful api，注册在springcloud-eureka server
-2. swagger
+1. 工程示范了注册在springcloud-eureka server的restful服务的生产者;
+2. spring boot默认把启动类所在包作为basePackage,本工程示范了如何自定义扫描多个基包;
+3. spring cloud-整合Swagger2构建RESTful服务的APIs;
+4. 自定义[eureka.instance.status-page.url](http://blog.csdn.net/liuchuanhong1/article/details/59064794),实现Eureka页面自动跳转到Swagger2UI界面查看服务接口信息;
 ### springcloud-zuul
 1. 通过反向代理
 2. 同样注册在springcloud-eureka server，并通过eureka注册中心，实现生产者与消费者的解耦
