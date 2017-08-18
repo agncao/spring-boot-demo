@@ -22,7 +22,8 @@
 这样，使用eureka作为restful服务的注册中心的优势就无法体现出来，使用zuul进行反向代理结合eureka，实现生产者和消费者的解耦。以下是各个服务的部署路径：
 1. springcloud-eureka: 127.0.0.1:8761
 2. springcloud-zuul: 127.0.0.1:8088
-3. springboot-rest: 127.0.0.1:8012
+3. springboot-rest: 127.0.0.1:8012  
+
 访问 http://127.0.0.1:8088/producer/hello 将路由到 http://127.0.0.1:8012/hello
 ### springcloud-eureka
 1. 注册中心;
