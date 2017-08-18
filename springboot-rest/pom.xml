@@ -15,11 +15,15 @@
     <dependencies>
         <dependency>
             <groupId>com.caojm.framework</groupId>
+            <artifactId>framework-cloud-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.caojm.framework</groupId>
             <artifactId>framework-boot-starter</artifactId>
         </dependency>
         <dependency>
             <groupId>com.caojm.framework</groupId>
-            <artifactId>framework-cloud-starter</artifactId>
+            <artifactId>framework-boot-swagger-starter</artifactId>
         </dependency>
     </dependencies>
 
@@ -65,9 +69,11 @@
         <profile>
             <id>dev</id>
             <properties>
-                <pom.log.level>INFO</pom.log.level>
+                <pom.log.level>debug</pom.log.level>
                 <pom.log.dir>logs</pom.log.dir>
                 <pom.application.name>springboot-rest</pom.application.name>
+                <pom.zuul.server.url>127.0.0.1:8088</pom.zuul.server.url>
+                <pom.zuul.server.serviceId>producer</pom.zuul.server.serviceId>
             </properties>
         </profile>
     </profiles>

@@ -29,6 +29,10 @@
 			<AppenderRef ref="STDOUT" />
 			<AppenderRef ref="RollingFile" />
 		</logger>
+		<logger name="com.caojm.framework" level="debug">
+			<AppenderRef ref="STDOUT" />
+			<AppenderRef ref="RollingFile" />
+		</logger>
 
 		<!-- 根日志记录级别 -->
 		<Root level="${pom.log.level}">

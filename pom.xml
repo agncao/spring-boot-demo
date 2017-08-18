@@ -24,6 +24,7 @@
     </modules>
     <properties>
         <framework.boot.version>1.0-SNAPSHOT</framework.boot.version>
+        <swagger.version>2.6.0</swagger.version>
         <!--<apache.httpclient.version>4.5.3</apache.httpclient.version>-->
     </properties>
 
@@ -37,6 +38,11 @@
             <dependency>
                 <groupId>com.caojm.framework</groupId>
                 <artifactId>framework-cloud-starter</artifactId>
+                <version>${framework.boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.caojm.framework</groupId>
+                <artifactId>framework-boot-swagger-starter</artifactId>
                 <version>${framework.boot.version}</version>
             </dependency>
         </dependencies>
